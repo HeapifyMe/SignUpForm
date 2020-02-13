@@ -25,10 +25,6 @@ public class FormActivity extends AppCompatActivity {
         Password = (EditText)findViewById(R.id.etPassword);
         PasswordConfirmation = (EditText)findViewById(R.id.etPasswordConfirmation);
         Login = (Button)findViewById(R.id.btSave);
-        if (Name.toString().isEmpty() || Email.toString().isEmpty() || Password.toString().isEmpty() || PasswordConfirmation.toString().isEmpty())
-        {
-            Toast.makeText(this, "Must enter all fields", Toast.LENGTH_SHORT).show();
-        }
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +45,7 @@ public class FormActivity extends AppCompatActivity {
 
         else if(!userPass.equals(passConfirm))
         {
-            Toast.makeText(this, "Passwords do not match idiot", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
         }
         else
         {
